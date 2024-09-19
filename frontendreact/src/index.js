@@ -3,6 +3,20 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import $ from 'jquery';
+
+$(document).ready(function(){
+  // Animação com JQuery
+  $('button').hover(
+    function () {
+      $(this).css('background-color', 'lightblue');
+    },
+    function(){
+      $(this).css('background-color', '')
+    }
+  );
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
